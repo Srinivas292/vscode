@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-      - run: npm ci
+      - run: npm install
       - run: npm run gulp vscode-win32-x64
       - name: Collect output
         run: Copy-Item -Recurse ..\VSCode-win32-x64 .\VSCode-win32-x64
