@@ -8,6 +8,9 @@ This repository ("`Code - OSS`") is where we (Microsoft) develop the [Visual Stu
 
 ## Visual Studio Code
 
+
+Srinivas
+
 <p align="center">
   <img alt="VS Code in action" src="https://github.com/user-attachments/assets/56af271c-949d-454c-a3ea-16188c063414">
 </p>
