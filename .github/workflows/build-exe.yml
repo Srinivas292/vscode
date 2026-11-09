@@ -5,20 +5,20 @@ jobs:
   build:
     runs-on: windows-latest
     timeout-minutes: 180
-    env:
-      npm_config_legacy_peer_deps: "true"
     steps:
       - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: pnpm install --frozen-lockfile
 
       - name: Build Windows app
-        run: npm run gulp vscode-win32-x64
+        run: pnpm run gulp vscode-win32-x64
 
       - name: Collect output
         run: Copy-Item -Recurse ..\VSCode-win32-x64 .\VSCode-win32-x64
